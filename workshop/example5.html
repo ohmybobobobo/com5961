@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head><title>Javascript Intro</title>
- <script> 
-  function show_topic() {
-    document.getElementById("topic").innerHTML = “Javascript is fun!”; }
- </script> 
-</head> 
 <body>
-<h1>Demo Page</h1>
- <p id="topic">A Paragraph</p> 
- <button type="button" onclick=“show_topic()”>Try it</button>
-</body> </html>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+</body>
+</html>
