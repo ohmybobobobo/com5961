@@ -1,42 +1,33 @@
-function addition(a, b) {
-      var i, j, c, sum;
-      a = parseInt(a);
-      b = parseInt(b);
-      if (b%2 !=0) {
-        c = (b-1)/2;
-        j = b-1;
-        sum = 0;
-        for (i=1;i<=c;i++) {
-          sum = sum + i + j;
-          j = j-1;
-        }
-        sum = sum + b;
-      } else {
-          c = b/2;
-          j = b;
-          sum = 0;
-          for (i=1;i<=c;i++) {
-            sum = sum + i + j;
-            j = j-1;
-          }
-      }
-      return sum;
-  }
-  function get_values() {
-      var z = 0;
-      start_int = document.getElementById("myForm").elements[0].value;
-      end_int = document.getElementById("myForm").elements[1].value;
-      if (start_int == '' || end_int == '') {
-        document.getElementById("demo").innerHTML = "End integer cell cannot be empty!";
-        return;
-      }
-      z = addition(start_int, end_int);
-      document.getElementById("demo").innerHTML = "The result is " + z + ".";
-      return;
-  }
-  function clear_values() {
-      document.getElementById("myForm").elements[0].value = "1";
-      document.getElementById("myForm").elements[1].value = "";
-      document.getElementById("demo").innerHTML = "";
-      return;
-  }
+function compute_x_plus_y(x,y) {
+  var z = 0;
+  x = parseInt(x);
+  y = parseInt(y);
+  z = x + y;
+  return z;
+}
+
+function ask_for_x_n_y() {
+  var x = prompt("Enter x value");
+  var y = prompt("Enter y value");
+  var z = compute_x_plus_y(x,y);
+  var x = document.getElementById("demo");
+  x.style.fontSize = "25px";
+  x.style.color = "red";
+  document.getElementById("demo").innerHTML = "The answer is " + z;
+}
+
+function ask_xy() {
+  var x = document.getElementById("myForm").elements[0].value;
+  var y = document.getElementById("myForm").elements[1].value;
+  var z = compute_x_plus_y(x,y);
+  var x = document.getElementById("demo");
+  x.style.fontSize = "25px";
+  x.style.color = "red";
+  document.getElementById("demo").innerHTML = "The answer is " + z;
+}
+
+function show_topic() {
+  var x = document.getElementById("welcome");
+  x.style.fontSize = "25px";
+  x.style.color = "red";
+}
